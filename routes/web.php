@@ -14,3 +14,18 @@ use App\Http\Controllers\PageController;
 */
 
 Route::get('/',[PageController::class, 'index'])->name('index');
+
+
+Route::get('/movie/{id}', [PageController::class, 'movieDetail'])->name('movie-detail');
+
+
+// Route::get('/product/{index}', function ($index){
+//     $comics = config('comicsdb');
+
+    
+//     $comic = $comics[$index];
+//     // dd($comic['title']);
+//     return view('details', compact('comic'));
+    
+
+// })->name('details');
