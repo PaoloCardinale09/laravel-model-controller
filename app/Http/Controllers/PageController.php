@@ -7,15 +7,12 @@ use App\Models\Movie;
 
 class PageController extends Controller
 {
-    public function homepage(){
-        return view('welcome');
-       
-    }
+   
     
-    public function movieList(){
+    public function index(){
         $movie = Movie::all();
-        dd($movie);
+        // dd($movie);
     
-        return view('movieList');
+        return view('index');
     }
 }
