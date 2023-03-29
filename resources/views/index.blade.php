@@ -5,19 +5,11 @@
 @section('main_content')
 
 <div class="container">
+  <h1 class="text-center p-3">Movie list</h1>
     <div class="row">
       @foreach ($movies as $movie)
-        <div class="col-4">
-            <div class="card"">
-              <div class="card-body">
-                <h5 class="card-title">{{ $movie->title }}</h5>
-                <h6 class="card-subtitle mb-2 text-muted"> {{ $movie->original_title }} </h6>
-                <h6 class="card-subtitle mb-2"> {{ $movie->nationality }} </h6>
-                <h6 class="card-subtitle mb-2"> {{ $movie->date }} </h6>
-                <h6 class="card-subtitle mb-2"> {{ $movie->vote }} </h6>
-
-              </div>
-            </div>    
+        <div class="col-4 g-3">
+              @include('partials._card_movie')
           </div>    
         @endforeach
     </div>    
