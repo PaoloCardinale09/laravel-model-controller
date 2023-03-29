@@ -5,6 +5,9 @@
       <h6 class="card-subtitle mb-2">Nationality: {{ $movie->nationality }} </h6>
       <h6 class="card-subtitle mb-2">Release date: {{ $movie->date }} </h6>
       <h6 class="card-subtitle mb-2">Vote: {{ $movie->vote }} </h6>
-      <a href="{{ route('index', ['id' =>$movie->id]) }}" class="btn btn-primary">Go back</a>
     </div>
   </div>  
+  
+  <div class="py-5">
+    <a href="{{ route('index', ['id' =>$movie->id]) }}" class="btn btn-primary">Go back</a>
+  </div>
